@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fbe7f2; /* le puse un fondo rosado pastel para que se viera suave */
+  color: #4a0033; /* este color lo uso para que el texto resalte bien */
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;        
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;        
+  height: auto;         
+  /* este es el contenedor principal donde acomodo las cajas */
+}
+
+.caja {
+  background: white;
+  padding: 20px;
+  flex: 1 1 300px;    
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(187, 22, 80, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* cada caja tiene fondo blanco, bordes redondeados y sombra suave */
+}
+
+/* esta clase es para la caja de la derecha, la quise diferenciar con un borde rosado */
+.derecha {
+  border-left: 5px solid #e75480;
+}
+
+/* aquí manejo la foto para que se vea redonda y con un efecto de sombra */
+.foto {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 10px; 
+  border: 1px solid transparent;
+  box-shadow: 0 4px 10px #f3676780;
+}
+
+.informacion {
+  text-align: left;
+  word-break: break-word; /* para que el texto largo no se dañe */
+}
+
+/* sección donde van los proyectos */
+.proyectos {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 20px;            
+  justify-content: center; 
+  padding: 20px;
+}
+
+.proyecto {
+  text-decoration: none;         
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 30px 70px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(157, 141, 161, 0.2);
+  transition: all 0.3s ease;      
+  font-weight: bold;
+  /* hice cada proyecto como una tarjeta clickeable */
+}
+
+.proyecto:hover {
+  background-color: #e75480;   
+  color: #fff;            
+  transform: scale(1.05);   
+  box-shadow: 0 6px 15px rgba(156, 86, 173, 0.4);
+  /* al pasar el mouse se transforma y cambia de color */
+}
+
+/* caja nueva de texto, más simple pero con sombra interna */
+.cajanueva {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  color: rgb(29, 27, 27);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px auto;       
+  max-width: 90%;          
+  text-align: left;
+}
+
+ul {
+  text-align: left;
+  margin: 10px auto 20px auto;
+  max-width: 500px;
+}
+
+ul li {
+  margin: 8px 0;
+  padding-left: 8px;
+}
+
+.caja:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(166, 58, 95, 0.25);
+  /* le di un efecto hover que levanta la caja un poco */
+}
+
+/* aquí controlo el ancho del contenedor de proyectos grandes */
+.contenedor-proyecto {
+  width: 100%;
+  max-width: 1250px;
+  padding: 20px;
+}
+
+/* tarjeta grande con info central */
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 15px rgba(166, 58, 95, 0.2);
+  text-align: center;
+}
+
+.tarjeta h1 {
+  color: #a63a5f;
+  margin-bottom: 15px;
+}
+
+.tarjeta h2 {
+  color: #e75480;
+  margin-top: 25px;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* botones para enlaces tipo GitHub */
+.boton-centro {
+  margin-top: 25px;
+}
+
+.boton-git {
+  text-decoration: none;
+  background: #e75480;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(166, 58, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.boton-git:hover {
+  background:#a63a5f;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(166, 58, 95, 0.5);
+  /* aquí también le puse hover con efecto de aumento */
+}
+
+/* barra superior fija con degradado */
+.navbar {
+  width: 100%;          
+  padding: 12px;
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 1.6rem); 
+  background: linear-gradient(135deg, #f5a9c4, #e75480);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;         
+  letter-spacing: 1px;      
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 12px rgba(166, 58, 95, 0.15); 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.logo img {
+  width: 50px; 
+  display: block;
+}
+
+.logo img:hover {
+  opacity: 0.8; 
+}
+
+/* contenedor de las redes sociales */
+.social-container {
+  display: flex;
+  gap: 20px;             
+  justify-content: center; 
+  margin-top: 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4a0033;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  background-color: #e75480;
+  border-radius: 12px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;  
+  border-radius: 50%; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* aquí va la sección del video */
+.seccion-video {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.seccion-video video {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
